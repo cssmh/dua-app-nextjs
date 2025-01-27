@@ -1,11 +1,13 @@
-import Home from "@/components/Home";
- const page = async () => {
-  const data = await fetch("https://job-task-server-neon.vercel.app/dua");
-  const dataDua = await data.json();
+import HomeContent from "@/components/HomeContent";
+import Navbar from "@/components/Navbar";
+
+const page = async () => {
   return (
-    <div>
-      <Home dataDua={dataDua}/>
-    </div>
+    <>
+      <Navbar />
+      <HomeContent />
+    </>
   );
-}
-export default page
+};
+
+export default page;

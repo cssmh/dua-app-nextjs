@@ -1,10 +1,16 @@
+import fs from "fs";
+import path from "path";
 import { CiSearch } from "react-icons/ci";
 import Setting from "./Setting";
 import Image from "next/image";
 import logo from "/public/assets/duacard.png";
 
-const HomeContent = async ({ dataDua }) => {
-  // console.log(dataDua);
+const HomeContent = async () => {
+  const filePath = path.join(process.cwd(), "public", "data.json"); 
+  // Path to the JSON file
+  const jsonData = fs.readFileSync(filePath, "utf-8"); // Read file
+  const dataDua = JSON.parse(jsonData);
+
   return (
     <div className="max-w-screen-2xl   mx-auto py-4 grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* left content  */}
@@ -76,9 +82,7 @@ const HomeContent = async ({ dataDua }) => {
           </div>
         ))}
       </div>
-
       {/* right content  */}
-
       <div className="lg:col-span-3 col-span-12 border h-max rounded-2xl  p-4 items-center bg-white">
         <h1 className="font-inter font-bold text-center text-2xl py-4">
           Setting

@@ -6,7 +6,6 @@ const Navbar = () => {
     <div className="max-w-screen-2xl mx-auto py-5">
       <div className="flex justify-between items-center font-inter">
         <h1 className="text-2xl font-bold ">Dua Page</h1>
-
         <div className="flex items-center justify-between -mr-[340px] border w-96 px-2 py-1 bg-white rounded-lg">
           <input
             className="outline-none border-none font-light placeholder:text-sm"
@@ -16,7 +15,7 @@ const Navbar = () => {
           <CiSearch className="bg-gray-100 text-gray-600 rounded-lg p-2 w-12 h-10" />
         </div>
         <div className="flex justify-center items-center gap-2">
-          <Image src="/assets/profile.png" width={30} height={10} alt={"profile"} />
+          <Image src="/assets/profile.jpg" width={30} height={10} alt={"profile"} />
           <select className="bg-transparent w-5 outline-none  border-none">
             <option value="support us"></option>
             <option value="support us">Support Us</option>
