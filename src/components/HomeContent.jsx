@@ -4,7 +4,7 @@ import Image from "next/image";
 import logo from "/public/assets/duacard.png";
 
 const HomeContent = async ({ dataDua }) => {
-  console.log(dataDua);
+  // console.log(dataDua);
   return (
     <div className="max-w-screen-2xl   mx-auto py-4 grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* left content  */}
