@@ -16,7 +16,7 @@ const Navbar = () => {
           <CiSearch className="bg-gray-100 text-gray-600 rounded-lg p-2 w-12 h-10" />
         </div>
         <div className="flex justify-center items-center gap-2">
-          <Image src="/assets/profile.png" width={30} height={10} />
+          <Image src="/assets/profile.png" width={30} height={10} alt={"profile"} />
           <select className="bg-transparent w-5 outline-none  border-none">
             <option value="support us"></option>
             <option value="support us">Support Us</option>

@@ -1,5 +1,5 @@
 import { CiSearch } from "react-icons/ci";
-import Setting from "./Setting/Setting";
+import Setting from "./Setting";
 import Image from "next/image";
 import logo from "/public/assets/duacard.png";
 
@@ -34,12 +34,9 @@ const HomeContent = async ({ dataDua }) => {
           ))}
         </div>
       </div>
-
       {/* center content  */}
-
       <div className="lg:col-span-6 col-span-12 border h-[100vh] overflow-y-scroll scroll-smooth  shadow-xl">
         <div className="bg-white rounded-md p-2 mb-2"></div>
-
         {dataDua.map((item, index) => (
           <div
             key={item._id}
@@ -49,7 +46,7 @@ const HomeContent = async ({ dataDua }) => {
               id={`category_${item._id}`}
               className="flex gap-4 mb-2 items-center"
             >
-              <Image src={logo} />
+              <Image src={logo} width={200} height={100} alt={"logo"} />
               <p className="text-lg text-[#1FA45B] font-bold">
                 {index + 1}.{item.title}
               </p>
