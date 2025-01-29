@@ -7,22 +7,4 @@
 body {
   background: #eeee;
   font-family: "Inter", sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-body.dark-mode {
-  background: #1a1a1a;
-  color: #eaeaea;
-}
-
-.toggle:checked {
-  background-color: #1fa45b;
-}
-
-.dark-mode .toggle:checked {
-  background-color: #4ade80;
-}
-
-.hello:checked {
-  color: rgb(0, 118, 0);
 }

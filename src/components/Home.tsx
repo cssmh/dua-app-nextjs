@@ -3,7 +3,7 @@ import path from "path";
 import { CiSearch } from "react-icons/ci";
 import Setting from "./Setting";
 import Image from "next/image";
-import logo from "/public/assets/duacard.png";
+import logo from "/public/assets/duaa.png";
 
 export default async function Home() {
   const filePath = path.join(process.cwd(), "public", "data.json");
@@ -11,11 +11,10 @@ export default async function Home() {
   const dataDua = JSON.parse(jsonData);
 
   return (
-    <div className="max-w-screen-2xl mx-auto py-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
-      {/* Left Sidebar */}
+    <div className="max-w-screen-2xl mx-auto py-4 grid grid-cols-1 lg:grid-cols-12 gap-6">
       <div className="lg:col-span-3 col-span-12 border rounded-lg shadow-md sticky top-4 h-max">
         <div className="bg-green-600 text-center rounded-t-lg py-3">
-          <p className="text-lg font-bold">Categories</p>
+          <p className="text-lg text-white font-bold">Categories</p>
         </div>
         <div className="p-4">
           <div className="flex items-center gap-3 mb-4 border rounded-md px-3 py-2 bg-gray-50 shadow-sm">
@@ -41,13 +40,13 @@ export default async function Home() {
         {dataDua.map((item, index) => (
           <div
             key={item._id}
-            className="mb-6 p-4 rounded-lg shadow-sm border"
+            className="mb-6 p-4"
           >
             <div
               id={`category_${item._id}`}
               className="flex items-center gap-4 mb-3"
             >
-              <Image src={logo} width={100} height={50} alt="logo" />
+              <Image src={logo} width={40} height={50} alt="logo" />
               <p className="text-xl font-bold text-green-600">
                 {index + 1}. {item.title}
               </p>
@@ -61,9 +60,8 @@ export default async function Home() {
           </div>
         ))}
       </div>
-      {/* Right Sidebar */}
-      <div className="lg:col-span-3 col-span-12 border rounded-lg shadow-md bg-white p-4">
-        <h1 className="text-xl font-bold text-center mb-4">Setting</h1>
+      <div className="lg:col-span-3 col-span-12 border rounded-lg shadow-md p-4">
+        <h1 className="text-xl font-bold text-center">Setting</h1>
         <Setting />
       </div>
     </div>
