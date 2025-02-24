@@ -28,7 +28,7 @@ export default async function Home() {
           {dataDua.map((item) => (
             <p
               key={item._id}
-              className="text-sm font-medium hover:text-green-600 transition-all duration-200 mb-3"
+              className="text-sm px-2 capitalize font-medium hover:text-green-600 transition-all duration-200 mb-3"
             >
               <a href={`#category_${item._id}`}>{item.category}</a>
             </p>
@@ -38,10 +38,7 @@ export default async function Home() {
       {/* Center Content */}
       <div className="lg:col-span-6 col-span-12 border rounded-lg shadow-md p-4 h-[80vh] overflow-y-auto">
         {dataDua.map((item, index) => (
-          <div
-            key={item._id}
-            className="mb-6 p-4"
-          >
+          <div key={item._id} className="mb-6 p-4">
             <div
               id={`category_${item._id}`}
               className="flex items-center gap-4 mb-3"
